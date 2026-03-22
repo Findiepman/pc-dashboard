@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Barlow:wght@300;400;600&display=swap');
+
+:root {
+  --bg: #0a0c0f;
+  --surface: #111418;
+  --border: #1e2530;
+  --accent-cpu: #00e5ff;
+  --accent-mem: #69ff47;
+  --accent-disk: #ff6b35;
+  --text-primary: #e8edf2;
+  --text-muted: #4a5568;
+  --text-label: #2d8a9e;
+  --mono: 'Share Tech Mono', monospace;
+  --sans: 'Barlow', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--sans);
+  min-height: 100vh;
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 39px,
+    #ffffff04 39px,
+    #ffffff04 40px
+  );
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
